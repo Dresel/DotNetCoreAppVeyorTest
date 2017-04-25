@@ -1,18 +1,15 @@
-using System;
-using System.Diagnostics;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
 namespace DotNetCoreAppVeyorTest.ClassLibrary.Test
 {
-	[TestClass]
+	using Xunit;
+
 	public class NumberCalculatorTest
 	{
-		[TestMethod]
+		[Fact]
 		public void Add_For1And2_Returns3()
 		{
 			NumberCalculator numberCalculator = new NumberCalculator();
 
-			Assert.IsTrue(numberCalculator.Add(1, 2) == 3);
+			Assert.True(numberCalculator.Add(1, 2) == 3);
 		}
 	}
 }
